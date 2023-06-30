@@ -41,7 +41,7 @@ body::before{
 .page{
 
     margin: auto;
-    border: 1px solid red;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,7 +77,7 @@ main {
         align-items: center;
         justify-content: center;
         max-width: 32rem;
-        border: 1px solid red;
+
         margin: auto;
 }
 
