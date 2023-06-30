@@ -50,9 +50,6 @@ header{
     flex-direction: column;
     align-items: center;
     padding-top: 3.2rem;
-    animation-name: topdown;
-    animation-duration: 700ms;
-
 }
 
 header h1 {
@@ -74,7 +71,6 @@ main {
         gap: 3.2rem;
         align-items: center;
         justify-content: center;
-        animation: downtop 700ms backwards;
         max-width: 32rem;
 }
 
@@ -99,6 +95,7 @@ main p {
 .posts img {
 
     width: 100%;
+    animation: downtop 700ms backwards;
 
 }
 
@@ -118,6 +115,8 @@ main p {
     position: absolute;
     right:1.6rem;
     top: 1.6rem;
+    animation-name: topdown;
+    animation-duration: 700ms;
 }
 
 @keyframes topdown{
