@@ -41,7 +41,12 @@ body::before{
 .page{
 
     margin: auto;
-    width: 320px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 header{
@@ -72,6 +77,8 @@ main {
         align-items: center;
         justify-content: center;
         max-width: 32rem;
+        border: 1px solid red;
+        margin: auto;
 }
 
 main p {
