@@ -13,19 +13,15 @@
     --color-images: #4A4E69;
     font-size: 62.5%;
     --fs-header: 4rem;
-
-
 } 
 
 body{
-
     background: var(--color-back);
     font-family: var(--tx-font);
     color: var(--color-font);
-
 }
 
-body::before{
+/*body::before{
 
     content: '';
     width: 100%;
@@ -36,17 +32,19 @@ body::before{
     z-index: -1;
     background: var(--color-header);
 
-}
+}*/
 
 .page{
-
     margin: auto;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: 0;
 
+}
+
+.infos{
+    width: 100%;
 }
 
 header{
@@ -55,17 +53,20 @@ header{
     flex-direction: column;
     align-items: center;
     padding-top: 3.2rem;
+    height: 29.7rem;
+    background: var(--color-header);
+    margin-bottom: 1.4rem;
 }
 
 header h1 {
-
     background: #CBC0D3;
     display: block;
     width: 100%;
     text-align: center;
     padding: 8px 0;
-    margin: 3.2rem 0 4.3rem 0;
+    height: 4.9rem;
     font-weight: 400;
+    margin-top: 2.9rem;
     line-height: 3.4rem;
     letter-spacing: 2px;
     font-size: 4rem
@@ -77,11 +78,10 @@ main {
         align-items: center;
         justify-content: center;
         max-width: 32rem;
-
         margin: auto;
 }
 
-main p {
+div p {
     color: var(--color-p);
     text-align: center;
     margin-bottom: 6.3rem;
@@ -90,13 +90,11 @@ main p {
     font-style: normal;
     font-weight: 400;
     line-height: 1.5rem;
-
 }
 
 
 .posts {
     position: relative;
-    
 }
 
 .posts img {
@@ -149,5 +147,80 @@ main p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media(min-width:700px){
+
+    body{
+        background: white;
+    }
+
+    .page{
+        display: flex;
+        flex-direction: row;
+        justify-content: 0;
+        align-items: 0;
+        margin: 0;
+    }
+
+    .infos{
+        height: 1279px;
+        width: 377px;
+        background: var(--color-header);
+        margin: 0;
+   
+        padding: 0;
+    }
+
+    header{
+        display:flex;
+        flex-direction: column;
+        padding-top: 3.2rem;
+        background: var(--color-header);
+        margin-top: 3.2rem;
+    }
+
+    .infos p {
+        margin-top: 3.2rem;
+        color: #FFF;
+        text-align: center;
+        font-size: 2.4rem;
+        height: 2.75rem;
+    }
+
+    main {
+        grid-template-areas: "A D" "B C";
+
+        max-width: 128rem;
+        height: 55rem;
+        margin: 3.2rem;
+        gap: 3.2rem;
+
+    }
+
+    main img {
+        width: 100%;
+    }
+
+
+
+  
+
+    main div:nth-child(1){
+        grid-area: A;
+    }
+
+    main div:nth-child(2){
+        grid-area: B;
+    }
+
+    main div:nth-child(3){
+        grid-area: C;
+    }
+
+    main div:nth-child(4){
+        grid-area: D;
+    }
+
 }
 
